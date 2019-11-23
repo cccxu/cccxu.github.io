@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .head, .foot{
+            border: 3px solid black;
+            max-width: inherit;
+            text-align: center;
+            height: 30px;
+        }
+        .main{
+            display: flex;
+            width: inherit;
+            height: 30px;
+        }
+        .left, .middle, .right {
+            border: 2px solid blue;
+            text-align: center;
+        }
+        .right, .left {
+            max-width: 100px;
+            flex: 0 1 auto;
+        }
+        .middle {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">头部</div>
+    <div class="main">
+        <div class="left">左侧边栏</div>
+        <div class="middle">中间自适应</div>
+        <div class="right">右侧边栏</div>
+    </div>
+    <div class="foot">底部</div>
+</body>
+</html>

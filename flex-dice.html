@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            width: inherit;
+            height: 80px;
+            background: black;
+            justify-content: center;
+            align-items: center;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 5px;
+            background-color: black;
+        }
+        .dice {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 10%;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .one {
+            justify-content: center;
+            align-items: center;
+        }
+        .two>.dot:last-child {
+            align-self: flex-end;
+        }
+        .three>.dot:last-child{
+            align-self: flex-end;
+        }
+        .three>.dot:nth-child(2){
+            align-self: center;
+        }
+        .four {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .colum {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: space-between;
+        }
+        .colum:last-child{
+            align-items: flex-end;
+        }
+        .five>.colum:nth-child(2){
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dice one">
+            <div class="dot"></div>
+        </div>
+        <div class="dice two">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="dice three">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="dice four">
+            <div class="colum">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="colum">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        <div class="dice five">
+            <div class="colum">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="colum">                
+                <div class="dot"></div>
+            </div>
+            <div class="colum">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        <div class="dice six">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>

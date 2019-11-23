@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 5px;
+            padding: 0%;
+        }
+        .item {
+            position: relative;
+        }
+
+        .item:hover{
+            color: red;
+        }
+
+        .item:hover ul{
+            display: block;
+            position: absolute;
+            top: 16px;
+            left: 0;
+        }
+
+        ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <span class="item">
+        导航1
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </span>
+    <span class="item">
+        导航2
+        <ul>
+            <li>11</li>
+            <li>22</li>
+            <li>33</li>
+        </ul>
+    </span>
+</body>
+</html>
