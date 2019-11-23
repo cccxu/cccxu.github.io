@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+}
+h1 {
+    padding: 5px auto 5px auto;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-weight: 420;
+}
+a {
+    text-decoration: none;
+}
+.flex {
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.head {
+    padding-top: 62px;
+    background-image: url(https://www.golaravel.com/assets/images/header-bg.jpg);
+    background-position: center 20%;
+}
+.nav {
+    padding-top: 5px;
+    margin: 5px 100px;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+.nav-btn{
+    margin: 5px 10px;
+}
+.nav-container {
+    width: 100%;
+    background-color: white;
+}
+.nav>a:hover{
+    color: plum;
+}
+.main {
+    height: auto;
+    background-color: gray;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.left {
+    background-color: aqua;
+    height: auto;
+    width: 60%;
+}
+.article{
+    height: 400px;
+    background: gray;
+    margin: 30px 30px;
+    color:white;
+}
+.right {
+    background-color: aquamarine;
+    height: 300px;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+.right>a{
+    background: blue;
+    color: white;
+    width: 40%;
+    text-align: center;
+}
+.right>a:hover{
+    color: red;
+}
+
+.foot {
+    height: 500px;
+    background-color: black;
+    justify-content: space-around;
+}
+.foot-item {
+    width: 25%;
+    background-color: aliceblue;
+    margin: 30px 0;
+}
+.log {
+    height: 6em;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    justify-content: center;
+}
+.info {
+    background-color: blanchedalmond;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
