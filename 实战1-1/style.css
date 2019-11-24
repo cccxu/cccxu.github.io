@@ -1,6 +1,7 @@
 body{
     margin: 0
 }
+
 *{
     box-sizing: border-box;
 }
@@ -59,7 +60,7 @@ body{
     background: black;
     border: 1px solid black;
 }
-/*导航栏*/
+
 .nav{
     display: flex;
     justify-content: center;
@@ -89,7 +90,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
-/*内容样式*/
+
 .content{
     width: 67%;
     font-size: 14px;
@@ -104,7 +105,7 @@ body{
     text-decoration: none;
     color: #f4645f;
 }
-/*内容头中的样式*/
+
 .post-title .link{
     color: #303030;
     text-decoration: none;
@@ -121,7 +122,7 @@ body{
 .post-meta .author{
     margin: 0 7px;
 }
-/*内容中的图片媒体样式*/
+
 .content .post .featured-media{
     margin-top: 30px;
 }
@@ -129,7 +130,7 @@ body{
     width: 100%;
     vertical-align: middle;
 }
-/*内容正文样式*/
+
 .post-content{
     font: 400 18px/1.62 Georgia,Xin Gothic,Hiragino Sans GB,Droid Sans Fallback,Microsoft YaHei,sans-serif;
     color: #444443;
@@ -140,20 +141,19 @@ body{
 .post .post-content p{
     margin-bottom: 26px;
 }
-/*清除浮动*/
+
 .clearfix:after{
     content: "";
     display: block;
     clear: both;   
 }
-/*报文页脚*/
+
 .post-footer{
     border-top: 1px solid #ebebeb;
     margin-top: 30px;
     padding-top: 21px;
 }
 
-/*页导航*/
 .pagination{
     margin-bottom: 35px;
     text-align: center;
@@ -184,7 +184,7 @@ body{
     padding: 3px 0;
     margin: 0 3px;
 }
-/*侧边栏*/
+
 .aside{
     width: 30%;
     font-size: 14px;
@@ -221,7 +221,6 @@ body{
     bottom: -1px;
 }
 
-/*页脚*/
 .footer{
     background: #202020;
     padding: 35px 0 0;
@@ -237,7 +236,7 @@ body{
     padding: 0 30px;
     margin-bottom: 35px;
 }
-/*页脚标题样式*/
+
 .footer-widget .title{
     font-size: 20px;
     color: #fff;
@@ -256,7 +255,7 @@ body{
     position: absolute;
     bottom: -1px;
 }
-/*页脚内容样式*/
+
 .footer-content{
     line-height: 1.5em;
     font-family: Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Hiragino Sans GB W3,WenQuanYi Micro Hei,Microsoft YaHei UI,Microsoft YaHei,sans-serif;
@@ -271,7 +270,7 @@ body{
 .footer-content .link:hover{
     color: #f4645f;
 }
-/*页脚的按钮*/
+
 .btn-footer{
     color: #959595;
     padding: 2px 7px;
@@ -281,14 +280,14 @@ body{
     background-color: #f4645f;
     color: #fff;
 }
-/*中间tag按钮*/
+
 .tag-cloud .btn-footer{
     border: 1px solid #303030;
 }
 .tag-cloud .btn-footer:hover{
     border: 1px solid #f4645f;
 }
-/*右边按钮*/
+
 .friends-link{
     line-height: 1.5em;
     font-family: Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Hiragino Sans GB W3,WenQuanYi Micro Hei,Microsoft YaHei UI,Microsoft YaHei,sans-serif;
@@ -304,7 +303,6 @@ body{
     border-top: 1px dashed #303030
 }
 
-/*copyright样式*/
 .copyright{
     background: #111;
     font-size: 13px;
