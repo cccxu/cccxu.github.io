@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .nav {
+            overflow: hidden;
+            background-color: bisque;
+            height: auto;
+        }
+        .fl {
+            float: left
+        }
+        [class*="item-"]{
+            text-align: center;
+            line-height: 40px;
+        }
+        [class*="item-"]:hover{
+            text-align: center;
+            line-height: 40px;
+            background-color: aliceblue;
+        }
+        .item-1 {
+            width: 80px;
+            height: 40px;
+        }
+        .item-2 {
+            width: 40px;
+            height: 40px;
+        }
+        .item-3 {
+            width: 40px;
+            height: 40px;
+        }
+        .item-4 {
+            width: 40px;
+            height: 40px;
+        }
+
+        @media only screen and (max-width: 768px){
+            [class*="item-"]{
+                width: 100%;
+            }
+            .nav {
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="nav">
+        <div class="item-1 fl">菜鸟教程</div>
+        <div class="item-2 fl">IOS</div>
+        <div class="item-3 fl">SVN</div>
+        <div class="item-4 fl">PC</div>
+    </div>
+</body>
+</html>
