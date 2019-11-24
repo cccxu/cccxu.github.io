@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 1000px;
+            background-color: aquamarine;
+        }
+        .logo {
+            background-color: white;
+            width: 160px;
+            height: 90px;
+            margin: 100px auto;
+            border: 3px solid black;
+            text-align: center;
+        }
+        .round {
+            background-color: yellow;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: relative;
+            top: -15px;
+            right: 20px;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-right-color: yellow;
+            position: relative;
+            top: -10px;
+            right: -40px;
+            transform: rotate(-30deg);
+        }
+        .text {
+            margin: 0 auto;
+            position: relative;
+            top: -62px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <div class="triangle"></div>
+        <div class="round"></div>
+        <div class="text">        
+            COURSE SHARE
+            <br />
+            <br />
+            课程分享
+        </div>
+    </div>
+</body>
+</html>
