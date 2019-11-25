@@ -127,6 +127,7 @@
             second = date.getSeconds();
         }
         setInterval(function(){
+            //清空画布
             ctx.clearRect(0,0,600,600);
             drawClockPie();
             //调整一下顺序，让小时刻度的蓝色覆盖分钟刻度的黑色
