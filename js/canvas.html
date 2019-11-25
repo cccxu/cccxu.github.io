@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="clock" width="300" height="300"></canvas>
+    </div>
+    <script>
+        //获取canvas 
+        var canvas = document.getElementById("clock")
+        var ctx = canvas.getContext("2d")
+        var hour,second,minute;
+        // 绘制表盘
+        function drawClockPie(){
+            ctx.beginPath();
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = '#0022cc';
+            ctx.arc(150,150,146,0,2*Math.PI);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.arc(150,150,6,0,2*Math.PI);
+            ctx.fillStyle = 'red';
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // 绘制时刻度
+        function drawClockHours(){
+            for(var i = 0,l = 12; i < 12; i++){
+                ctx.save();
+                ctx.translate(150,150);
+                ctx.rotate(i*1/12*2*Math.PI);
+                ctx.beginPath();
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = 'blue';
+                ctx.moveTo(0,-140);
+                ctx.lineTo(0,-125);
+                ctx.stroke();
+                ctx.closePath();
+                ctx.restore();
+            }
+        }
+
+        // 绘制分刻度
+        function drawClockMins(){
+            for(var i = 0,l = 60; i < 60; i++){
+                ctx.save();
+                ctx.translate(150,150);
+                ctx.rotate(i*1/60*2*Math.PI);
+                ctx.beginPath();
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = 'black';
+                ctx.moveTo(0,-140);
+                ctx.lineTo(0,-133);
+                ctx.stroke();
+                ctx.closePath();
+                ctx.restore();
+            }
+        }
+
+        // 绘制时针
+        function drawHourPin(){
+            ctx.save();
+            ctx.translate(150,150);
+            ctx.rotate((hour*60*60+minute*60+second)/(12*60*60)*2*Math.PI);
+            ctx.beginPath();
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 3;
+            ctx.moveTo(0,0);
+            ctx.lineTo(0,-40);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.restore();
+        }
+
+        // 绘制分针
+        function drawMinPin(){
+            ctx.save();
+            ctx.translate(150,150);
+            ctx.rotate((minute*60+second)/(60*60)*2*Math.PI);
+            ctx.beginPath();
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 2;
+            ctx.moveTo(0,0);
+            ctx.lineTo(0,-60);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.restore();
+        }
+
+        // 绘制秒针
+        function drawSecPin(){
+            ctx.save();
+            ctx.translate(150,150);
+            ctx.rotate(second/60*2*Math.PI);
+            ctx.beginPath();
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 1;
+            ctx.moveTo(0,0);
+            ctx.lineTo(0,-80);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.restore();
+        }
+
+        // 获取时间
+        function getTimes(){
+            var date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            hour = date.getHours();
+            minute = date.getMinutes();
+            second = date.getSeconds();
+        }
+        setInterval(function(){
+            ctx.clearRect(0,0,600,600);
+            drawClockPie();
+            //调整一下顺序，让小时刻度的蓝色覆盖分钟刻度的黑色
+            drawClockMins();
+            drawClockHours();
+            getTimes();
+            drawHourPin();
+            drawMinPin();
+            drawSecPin();
+        },1000);
+    </script>
+</body>
+</html>
