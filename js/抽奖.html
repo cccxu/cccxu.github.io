@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="award">点击“开始“按钮，开始抽奖！</div>
+    <div class="action">
+        <button id="start">开 始</button>
+        <button id="stop">停 止</button>
+    </div>
+    <script>
+        var timer;
+        //抽奖函数
+        function lottery(){
+            var award = document.getElementById("award")
+            var awardText
+            var awardNum = Math.random()*100
+            if(awardNum === 0){
+                awardText = "特等奖"
+            } else if(awardNum <= 10 ){
+                awardText = "一等奖"
+            } else if(awardNum <= 40){
+                awardText = "二等奖"
+            } else if(awardNum <= 80){
+                awardText = "三等奖"
+            } else {
+                awardText = "鼓励奖"
+            }
+            award.innerText = awardText
+        }
+        //开始抽奖
+        function start(){
+            console.log("start")
+            timer = setInterval("lottery()", 50)
+        }
+        //停止抽奖
+        function stop(){
+            console.log("stop")
+            clearInterval(timer)
+        }
+        //绑定事件
+        document.getElementById("start").addEventListener("click", start)
+        document.getElementById("stop").addEventListener("click", stop)
+    </script>
+</body>
+</html>
